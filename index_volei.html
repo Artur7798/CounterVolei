@@ -11,21 +11,24 @@
 <form action="#" method="post">
 <h2>Qual será o nome do Time?</h2>
   <p>
-<input type="text"/>
+<input id="response_time" type="text"/>
   </p>
   <p>
     <h2>O nome das pessoas presentes no time:</h2>
   </p>
   <p>
-    <input type="text" style="width: 200px"/>
+    <input id="response_name" type="text" style="width: 200px"/>
   </p>
-  <input type="submit"/>
+  <button onclick=save_input() type="button">Salvar</button>
 </form>
 
+<p id="total_response"></p>
+
+  <p id="time1" style="position: relative;left: 652px;top: -182px;"></p>
   <h2 id="count-el" style="font-size: 63px;position: absolute;left: 667px;top: 218px;">0</h2>
   <button id="increment-btn" onclick="increment()" style="position: absolute;left: 667px;top: 348px;font-size: 16px;">+1</button>
 
-
+  <p id="time2" style="position: relative;left: 933px;top: -218px;"></p>
   <h2 id="count-el2" style="font-size: 63px;position: absolute;left: 949px;top: 218px;">0</h2>
   <button id="increment-btn2" onclick="increment2()" style="position: absolute;left: 949px;top: 348px;font-size: 16px;">+1</button>
 

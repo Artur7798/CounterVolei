@@ -1,38 +1,73 @@
 body {
-    background-image: url("yarn.jpeg");
-    background-size: cover;
+    background-color: blue;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     height: 100vh;
 }
 
-h1 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+h1{
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    padding-top: 433px;
+    left: -5px;
+    top: -414px;
 }
 
-h2 {
-    font-size: 50px;
-    margin-top: 0;
-    margin-bottom: 20px;
+form{
+    position: relative;
+    left: -590px;
+    top: -365px;
 }
-
-button {
-    border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: white;
-    font-weight: bold;
-    width: 200px;
-    margin-bottom: 5px;
-    border-radius: 5px;
+#response_name{
+    width: 200px
 }
-
-#increment-btn {
-    background: darkred;
+#time1{
+    position: relative;
+    left: -155px;
+    top: -476px;
 }
-
-#save-btn {
-    background: darkgreen;
+#count-el{
+    font-size: 63px;
+    position: absolute;
+    left: 667px;
+    top: 218px;
+}
+#increment-btn{
+    position: absolute;
+    left: 667px;
+    top: 348px;
+    font-size: 16px;
+}
+#time2{
+    position: relative;
+    left: -155px;
+    top: -535px;
+}
+#count-el2{
+    font-size: 63px;
+    position: absolute;
+    left: 949px;
+    top: 218px;
+}
+#increment-btn2{
+    position: absolute;
+    left: 949px;
+    top: 348px;
+    font-size: 16px;
+}
+#save-el{
+    position: absolute;
+    left: 693px;
+    top: 494px;
+    font-size: 23px;
+}
+#save_btn{
+    position: absolute;
+    left: 662px;
+    top: 433px;
+    width: 20%;
+    font-size: 29px;
+    background-color: green;
 }
 

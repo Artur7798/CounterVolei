@@ -6,7 +6,7 @@
   <title>Counter Volei</title>
 </head>
 <body>
-<h1 style="font-size: 20px;text-align: center;padding-top: 131px;">Contador de pontos de volei</h1>
+<h1>Contador de pontos de volei</h1>
 
 <form action="#" method="post">
 <h2>Qual será o nome do Time?</h2>
@@ -17,24 +17,48 @@
     <h2>O nome das pessoas presentes no time:</h2>
   </p>
   <p>
-    <input id="response_name" type="text" style="width: 200px"/>
+    <input id="response_name" type="text"/>
   </p>
   <button onclick=save_input() type="button">Salvar</button>
 </form>
-
 <p id="total_response"></p>
 
-  <p id="time1" style="position: relative;left: 652px;top: -182px;"></p>
-  <h2 id="count-el" style="font-size: 63px;position: absolute;left: 667px;top: 218px;">0</h2>
-  <button id="increment-btn" onclick="increment()" style="position: absolute;left: 667px;top: 348px;font-size: 16px;">+1</button>
+  <p id="time1"></p>
+  <h2 id="count-el">0</h2>
+  <button id="increment-btn" onclick="increment()">+1</button>
 
-  <p id="time2" style="position: relative;left: 933px;top: -218px;"></p>
-  <h2 id="count-el2" style="font-size: 63px;position: absolute;left: 949px;top: 218px;">0</h2>
-  <button id="increment-btn2" onclick="increment2()" style="position: absolute;left: 949px;top: 348px;font-size: 16px;">+1</button>
+  <p id="time2"></p>
+  <h2 id="count-el2" >0</h2>
+  <button id="increment-btn2" onclick="increment2()">+1</button>
 
 
-<p id="save-el" style="position: absolute;left: 693px;top: 494px;font-size: 23px;"></p>
-<button id="save_btn" onclick="save()" style="position: absolute;left: 662px;top: 433px;width: 20%;font-size: 29px;background-color: green;">Salvar partida</button>
+<p id="save-el" ></p>
+<button id="save_btn" onclick="save()">Salvar partida</button>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Salvando o nome dos grupos e participantes</title>
+</head>
+<body>
+<input type="text" id="inputText1" placeholder="Digite o participante 1">
+<input type="text" id="inputText2" placeholder="Digite o nome do time 1">
+<button onclick="saveInput()">Salvar</button>
+
+<table id="table">
+  <thead>
+  <tr>
+    <th>Participante</th>
+    <th>Time</th>
+  </tr>
+  </thead>
+  <tbody id="tbody">
+  </tbody>
+</table>
+<script>
+
+</script>
 <script src="index.js"></script>
 </body>
 </html>

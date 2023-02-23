@@ -8,11 +8,6 @@
 <body>
 <h1>Contador de pontos de volei</h1>
 
-  <!DOCTYPE html>
-  <html>
-  <head>
-    <title>Salvando o nome dos grupos e participantes</title>
-  </head>
   <body>
   <input type="text"  id="inputText1" placeholder="Digite o nome dos participantes">
   <input type="text"  id="inputText2" placeholder="Digite o nome do time">
@@ -22,22 +17,24 @@
     <thead>
     <tr>
       <th style="padding-right: 85px;">Participantes</th>
-      <th>Time</th>
+      <th>Grupo</th>
     </tr>
     </thead>
     <tbody id="tbody">
     </tbody>
   </table>
 <p id="total_response"></p>
-<div id="game" style="position: relative;top: -664px">
+
+<div id="game">
   <p id="time1"></p>
   <h2 id="count-el">0</h2>
   <button id="increment-btn" onclick="increment()">+1</button>
+  <button id="menos-btn" onclick="menos()">-1</button>
 
   <p id="time2"></p>
   <h2 id="count-el2" >0</h2>
   <button id="increment-btn2" onclick="increment2()">+1</button>
-
+  <button id="menos2-btn" onclick="menos2()">-1</button>
 
 <p id="save-el" ></p>
 <button id="save_btn" onclick="save()">Salvar partida</button>

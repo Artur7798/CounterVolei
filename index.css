@@ -39,6 +39,18 @@ form{
     top: 348px;
     font-size: 16px;
 }
+#menos-btn{
+    position: absolute;
+    left: 667px;
+    top: 380px;
+    font-size: 16px;
+}
+#menos2-btn{
+    position: absolute;
+    left: 954px;
+    top: 380px;
+    font-size: 16px;
+}
 #time2{
     position: relative;
     left: -155px;
@@ -69,5 +81,15 @@ form{
     width: 20%;
     font-size: 29px;
     background-color: green;
+}
+#game{
+    position: absolute;
+    top: -111px;
+    width: 100%;
+}
+#divisao{
+    position: relative;
+    left: -591px;
+    top: -290px;
 }
 

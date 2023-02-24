@@ -9,15 +9,16 @@
 <h1>Contador de pontos de volei</h1>
 
 
-  <input type="text"  id="inputText1" placeholder="Digite o nome dos participantes">
-  <input type="text"  id="inputText2" placeholder="Digite o nome do time">
+  <input type="text" id="inputText1" onchange="document.getElementById('time1').value = this.value;" placeholder="Digite todos os participantes do time">
+  <input type="text"  id="inputText2" onchange="document.getElementById('time2').value = this.value;" placeholder="Digite o nome do time">
+
   <button onclick="saveInput()">Salvar</button>
 
   <table id="table" style="position: relative;left: 674px;">
     <thead>
     <tr>
-      <th style="padding-right: 85px;">Grupo 1:</th>
-      <th>Grupo 2</th>
+      <th style="padding-right: 85px;">Nomes:</th>
+      <th>Nome do Grupo</th>
     </tr>
     </thead>
     <tbody id="tbody">
@@ -26,12 +27,12 @@
 <p id="total_response"></p>
 
 <div id="game">
-  <p id="time1"></p>
+  <p><input type="text" id="time1" style="border: none;background: none;"></p>
   <h2 id="count-el">0</h2>
   <button id="increment-btn" onclick="increment()">+1</button>
   <button id="menos-btn" onclick="menos()">-1</button>
 
-  <p id="time2"></p>
+  <p><input type="text" id="time2" style="border: none;background: none;"></p>
   <h2 id="count-el2" >0</h2>
   <button id="increment-btn2" onclick="increment2()">+1</button>
   <button id="menos2-btn" onclick="menos2()">-1</button>

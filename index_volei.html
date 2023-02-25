@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Contador de pontos de volei</h1>
-<button><a href="Divisão_do_Mês.html" style="position: relative;left: -389px;bottom: 445px;">Ir para a divisão do mês</a></button>
+<a href="Divisão_do_Mês.html" style="position: relative;left: -389px;bottom: 445px;">Ir para a divisão do mês</a>
 
   <input type="text" id="inputText1" onchange="document.getElementById('time1').value = this.value;" placeholder="Digite todos os participantes do time">
   <input type="text"  id="inputText2" onchange="document.getElementById('time2').value = this.value;" placeholder="Digite o nome do time">
@@ -42,6 +42,33 @@
 </div>
 <div id="divisao">
 </div>
+<input type="text" id="meuInput">
+<button onclick="atualizarValor()">Adicionar os primeiros participantes</button>
+<button onclick="atualizarSegundaVez()">Adicionar os segundos participantes</button>
+
+<div id="primeiraVez"></div>
+<div id="segundaVez"></div>
+
+<script>
+  let primeiraVez = true;
+
+  function atualizarValor() {
+    const valor = document.getElementById('meuInput').value;
+
+    if (primeiraVez) {
+      document.getElementById('primeiraVez').textContent = valor;
+      primeiraVez = false;
+    }
+  }
+
+  function atualizarSegundaVez() {
+    const valor = document.getElementById('meuInput').value;
+    document.getElementById('segundaVez').textContent = valor;
+  }
+</script>
+
+
+
 <script src="index.js"></script>
 </body>
 </html>

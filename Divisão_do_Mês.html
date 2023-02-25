@@ -2,14 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+
 </head>
 <body>
-<h1>Divisão do Mês</h1>
 
+    <title>Divisão de Contas</title>
 
+<h1>Divisão de Contas</h1>
 
+<!-- Lista de pessoas -->
+<ul id="pessoas">
 
-</body>
+    <li>João</li>
+    <li>Maria</li>
+    <li>Pedro</li>
+    <li>Ana</li>
+</ul>
+<!-- Inputs para marcação de presença -->
+<h2>Segunda</h2>
+<div>
+    <h2>Valor de Segunda: <span id="ValorSegunda"></span></h2>
+    <input type="checkbox" id="segunda-joao">
+    <label for="segunda-joao">João</label>
+    <input type="checkbox" id="segunda-maria">
+    <label for="segunda-maria">Maria</label>
+    <input type="checkbox" id="segunda-pedro">
+    <label for="segunda-pedro">Pedro</label>
+    <input type="checkbox" id="segunda-ana">
+    <label for="segunda-ana">Ana</label>
+
+</div>
+<h2>Domingo</h2>
+<div>
+    <h2>Valor de Domingo: <span id="ValorDomingo"></span></h2>
+    <input type="checkbox" id="domingo-joao">
+    <label for="domingo-joao">João</label>
+    <input type="checkbox" id="domingo-maria">
+    <label for="domingo-maria">Maria</label>
+    <input type="checkbox" id="domingo-pedro">
+    <label for="domingo-pedro">Pedro</label>
+    <input type="checkbox" id="domingo-ana">
+    <label for="domingo-ana">Ana</label>
+</div>
+<!-- Resultados da divisão de contas -->
+<h2>Resultados</h2>
+<p>Segunda:</p>
+<ul id="resultados-segunda"></ul>
+<p>Domingo:</p>
+<ul id="resultados-domingo"></ul>
+
+<a href="index_volei.html" style="position: relative;left: 11px;bottom: -38px;">Voltar para Contador de Jogo</a>
+
 <script src="index.js"></script>
+</body>
 </html>

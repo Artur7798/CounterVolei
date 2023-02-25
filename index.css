@@ -1,5 +1,5 @@
 body {
-    background-color: blue;
+    background-color: rgba(12, 74, 110, 1);
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     height: 100vh;
@@ -101,5 +101,8 @@ form{
     position: relative;
     top: 214px;
     left: -109px;
+}
+input[type=checkbox] {
+    transform: scale(2); /* aumenta o tamanho do checkbox */
 }
 

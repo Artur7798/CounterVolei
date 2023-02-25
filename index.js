@@ -66,8 +66,18 @@ let count2 = 0
     inputText2.value = "";
 }
 
+// Script para a divisão dos valores do Vôlei//
 
+var valorSegunda = 500; // substitua o valor da matrícula aqui
+var pessoasDomingo=5
+var valorDomingo = 500; // substitua o valor da matrícula aqui
+var pessoasSegunda=4
 
+var valorPorPessoa = valorSegunda / pessoasSegunda;
+var valorPorPessoa2 = valorDomingo / pessoasDomingo;
+
+console.log("O valor de segunda é R$" + valorSegunda + ", e cada pessoa deve pagar R$" + valorPorPessoa + ".");
+console.log("O valor de segunda é R$" + valorDomingo + ", e cada pessoa deve pagar R$" + valorPorPessoa2 + ".");
 
 
 

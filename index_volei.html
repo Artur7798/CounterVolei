@@ -67,6 +67,69 @@
   }
 </script>
 
+  <meta charset="UTF-8">
+  <title>Copiar tabela para textarea</title>
+
+<table id="tabela">
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <th>Sobrenome</th>
+    <th>Idade</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>João</td>
+    <td>Silva</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>Maria</td>
+    <td>Souza</td>
+    <td>30</td>
+  </tr>
+  </tbody>
+</table>
+<textarea id="textarea"></textarea>
+<button onclick="copiarTabela()">Copiar tabela para textarea</button>
+
+<script>
+  function copiarTabela() {
+    // Obter a referência da tabela
+    var tabela = document.getElementById("tabela");
+
+    // Obter todas as linhas da tabela
+    var linhas = tabela.rows;
+
+    // Percorrer todas as linhas e obter as células
+    var texto = "";
+    for (var i = 0; i < linhas.length; i++) {
+      var linha = linhas[i];
+      var celulas = linha.cells;
+
+      // Concatenar os valores das células separados por vírgula
+      var linhaTexto = "";
+      for (var j = 0; j < celulas.length; j++) {
+        var celula = celulas[j];
+        linhaTexto += celula.textContent + ",";
+      }
+
+      // Remover a vírgula final e adicionar uma quebra de linha
+      linhaTexto = linhaTexto.slice(0, -1) + "\n";
+
+      // Adicionar a linha concatenada à variável de texto
+      texto += linhaTexto;
+    }
+
+    // Obter a referência do elemento textarea
+    var textarea = document.getElementById("textarea");
+
+    // Definir o valor do textarea para a string resultante
+    textarea.value = texto;
+  }
+</script>
+
 
 
 <script src="index.js"></script>

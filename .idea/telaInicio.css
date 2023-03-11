@@ -1,0 +1,15 @@
+#telainicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    position: absolute;
+    left: 533px;
+    width: 600px;
+    top:89px;
+    background-color: green;
+}
+#tituloInicio {
+    position: relative;
+    left: 611px;
+}

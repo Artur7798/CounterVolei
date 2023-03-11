@@ -106,11 +106,4 @@ input[type=checkbox] {
     transform: scale(2); /* aumenta o tamanho do checkbox */
 }
 
-#telainicio{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: blue;
 
-}

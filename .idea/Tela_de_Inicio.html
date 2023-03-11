@@ -2,16 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="telaInicio.css">
     <title>Title</title>
 </head>
 <body>
-<h1>Bem-vindo ao CounterAreias</h1>
+<h1 id="tituloInicio">Bem-vindo ao CounterAreias</h1>
 
-<div id="telainicio"></div>
+<div id="telainicio">
+    <label style="position: relative;left: 201px;top: -153px;">Preencha as informações para poder começar o Jogo</label>
+    <div id="form"></div>
+    <button onclick="submit()" style="position: relative;top: 33px;left: 54px;">Enviar Informações</button>
 
 
+    <button onclick="window.location.href='index_volei.html'" style="position: relative;text-decoration:none;left: -290px;bottom: -230px;">Começar jogo</button>
+</div>
 
-<script src="index.js"></script>
+
+<script src="TelaInicio.js"></script>
 </body>
 </html>

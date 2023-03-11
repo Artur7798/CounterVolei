@@ -7,8 +7,7 @@
 </head>
 <body>
 <h1>Contador de pontos de volei</h1>
-<a href="Divisão_do_Mês.html" style="position: relative;left: -389px;bottom: 445px;">Ir para a divisão do mês</a>
-
+<button onclick="window.location.href='Divisão_do_Mês.html'" style="position: relative;text-decoration:none;left: -389px;bottom: 445px;">Ir para a divisão do mês</button>
 
   <table id="table" style="position: relative;left: 674px;">
     <thead>
@@ -37,79 +36,12 @@
 <button id="save_btn" onclick="save()">Salvar partida</button>
 </div>
 
-<input type="text" id="meuInput" style="position: relative;left: -259px;bottom: 23px;">
-<button onclick="atualizarValor()" style="position: relative;left: -260px;bottom: 22px;">Adicionar os primeiros participantes</button>
-<button onclick="atualizarSegundaVez()" style="position: relative;left: -262px;bottom: 22px;">Adicionar os segundos participantes</button>
-
-<div id="primeiraVez" style="position: absolute;left: 686px;"></div>
-<div id="segundaVez" style="position: absolute;left: 686px;top: 597px;"></div>
-
-
-<input type="text" id="meuInput2" style="position: relative;left: -878px;">
-<button onclick="atualizarValor2()" style="position: relative;left: -877px;">Adicionar o primeiro Time</button>
-<button onclick="atualizarSegundaVez2()" style="position: relative;left: -877px;">Adicionar o segundo Time</button>
-<div id="primeiraVez2" style="position: absolute;left: 698px;"></div>
-<div id="segundaVez2" style="position: absolute;left: 840px;top: 612px;"></div>
-
-<script>
-  let primeiraVez = true;
-
-  function atualizarValor() {
-    const valor = document.getElementById('meuInput').value;
-
-    if (primeiraVez) {
-      document.getElementById('primeiraVez').textContent = valor;
-      primeiraVez = false;
-    }
-  }
-
-  function atualizarSegundaVez() {
-    const valor = document.getElementById('meuInput').value;
-    document.getElementById('segundaVez').textContent = valor;
-  }
-  let primeiraVez1 = true;
-
-  function atualizarValor2() {
-    const valor = document.getElementById('meuInput2').value;
-
-    if (primeiraVez1) {
-      document.getElementById('primeiraVez2').textContent = valor;
-      primeiraVez1 = false;
-    }
-  }
-
-  function atualizarSegundaVez2() {
-    const valor = document.getElementById('meuInput2').value;
-    document.getElementById('segundaVez2').textContent = valor;
-  }
-</script>
 
   <meta charset="UTF-8">
   <title>Copiar tabela para textarea</title>
 
-<table id="tabela">
-  <thead>
-  <tr>
-    <th>Nome</th>
-    <th>Sobrenome</th>
-    <th>Idade</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>João</td>
-    <td>Silva</td>
-    <td>25</td>
-  </tr>
-  <tr>
-    <td>Maria</td>
-    <td>Souza</td>
-    <td>30</td>
-  </tr>
-  </tbody>
-</table>
-<textarea id="textarea"></textarea>
-<button onclick="copiarTabela()">Copiar tabela para textarea</button>
+<textarea style="position: absolute;left: 743px;top: 440px;width: 10%;height: 5%;font-size: 14px;"></textarea><!---<textarea id="textarea"></textarea>
+<button onclick="copiarTabela()">Copiar tabela para textarea</button>--->
 
 <script>
   function copiarTabela() {

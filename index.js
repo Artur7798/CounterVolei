@@ -125,3 +125,6 @@ checkboxesDomingo.forEach(checkbox => {
         atualizarResultados(checkboxesDomingo, resultadosDomingo);
     });
 });
+
+
+//Tela de informações

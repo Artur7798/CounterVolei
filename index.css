@@ -9,7 +9,7 @@ body {
     background-color: green;
     border: solid 5px;
     position: absolute;
-    left: 79px;
+    left: 633px;
     top: 172px;
     width: 400px;
     height: 300px;
@@ -122,4 +122,32 @@ input[type=checkbox] {
     transform: scale(2); /* aumenta o tamanho do checkbox */
 }
 
+#ul-el{
+    position: absolute;
+    left: 566px;
+    top: 138px;
+}
+#ul-el2{
+position: absolute;
+left: 843px;
+top: 138px;
+}
 
+#ul-el3{
+    position: absolute;
+    left: 598px;
+    top: 188px;
+}
+
+#ul-el4{
+    position: absolute;
+    left: 878px;
+    top: 188px;
+}
+#ul-el5{
+    position: absolute;
+    left: 675px;
+    top: 206px;
+    font-size: 29px;
+    width: 217px;
+}

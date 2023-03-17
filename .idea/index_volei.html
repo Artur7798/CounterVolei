@@ -10,51 +10,55 @@
   <div id="telainicio">
     <label style="position: relative;left: -2px;top: 6px;">Preencha as informações para poder começar o Jogo</label>
     <div id="form">
-      <ul><input type="text" placeholder="Nome dos participantes do grupo 1" id="input-time1">
-        <ul id="ul-el"></ul></ul>
-      <ul><input type="text" placeholder="Nome dos participantes dogrupo 2" id="input-time2">
-        <ul id="ul-el2"></ul></ul>
-      <ul><input type="text" placeholder="Nome do grupo 1" id="input-time3">
-        <ul id="ul-el3"></ul></ul>
-      <ul><input type="text" placeholder="Nome do grupo 2" id="input-time4">
-        <ul id="ul-el4"></ul></ul>
-      <ul><input type="text" placeholder="N do Jogo" id="input-time5">
-        <ul id="ul-el5"></ul></ul>
-      <ul><input type="text" placeholder="N do Jogo" id="input-time6">
-        <ul id="ul-el6"></ul></ul>
-      <button id="increment-btn" style="position: relative;top: 5px;left: 18px;">Enviar Informações</button>
+      <ul><input type="text" placeholder="Nome dos participantes do grupo 1" id="input-time1"></ul>
+
+        <ul><input type="text" placeholder="Nome dos participantes dogrupo 2" id="input-time2"></ul>
+
+        <ul><input type="text" placeholder="Nome do grupo 1" id="input-time3"></ul>
+
+        <ul><input type="text" placeholder="Nome do grupo 2" id="input-time4"></ul>
+
+        <ul><input type="text" placeholder="N do Jogo" id="input-time5"></ul>
+
+      <button id="increment-btn1" style="position: relative;top: 5px;left: 18px;">Enviar Informações</button>
+
   </div>
   </div>
 
 
-    <h1>Contador de pontos de volei</h1>
-<button onclick="window.location.href='Divisão_do_Mês.html'" style="position: relative;text-decoration:none;left: -389px;bottom: 445px;">Ir para a divisão do mês</button>
+    <h1 style="position: absolute;top: -419px;">Contador de pontos de volei</h1>
+
 
 
   <p id="total_response"></p>
 
-  <div id="game">
-    <p><input type="text" id="time1" style="border: none;background: none;"></p>
+  <div id="game" style="display:none">
+    <ul id="ul-el"></ul>
+    <ul id="ul-el2"></ul>
+    <ul id="ul-el3"></ul>
+    <ul id="ul-el4"></ul>
+    <ul id="ul-el5"></ul>
+    <button onclick="window.location.href='Divisão_do_Mês.html'" style="position: relative;/* text-decoration:none; */left: -535px;bottom: -87px;">Ir para a divisão do mês</button>
+    <button id="newGame" onclick="NewGame()" style="position: relative;top: 87px;left: -534px;">Novo Jogo</button>
+
     <h2 id="count-el">0</h2>
     <button id="increment-btn" onclick="increment()">+1</button>
     <button id="menos-btn" onclick="menos()">-1</button>
 
-    <p><input type="text" id="time2" style="border: none;background: none;"></p>
+
     <h2 id="count-el2" >0</h2>
     <button id="increment-btn2" onclick="increment2()">+1</button>
     <button id="menos2-btn" onclick="menos2()">-1</button>
 
-  <p id="save-el" ></p>
+  <p id="save-el"></p>
   <button id="save_btn" onclick="save()">Salvar partida</button>
   </div>
 
 
-  <!---<div id="copia_cola">
-  <title>Copiar tabela para textarea</title>
-    <textarea id="textarea"></textarea>
-    <button onclick="copiarTabela()">Copiar tabela para textarea</button>
+  <div id="copia_cola">
+    <textarea id="textarea" style="position: absolute;top: 490px;left: 601px;width: 30%; display: none"></textarea>
 
-  </div>!---->
+  </div>
   <script>
     function copiarTabela() {
       // Obter a referência da tabela

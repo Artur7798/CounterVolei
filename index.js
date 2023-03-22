@@ -2,8 +2,6 @@
     let countEl = document.getElementById("count-el") // pass in arguments
     let countEl2 = document.getElementById("count-el2") // pass in arguments
     let placar = "O placar final ficou: "
-    const inputText1 = document.getElementById("inputText1");
-    const inputText2 = document.getElementById("inputText2");
     //Tela de informações
     let inputBtn = document.getElementById("increment-btn1")
     const inputTime1 = document.getElementById("input-time1")
@@ -109,19 +107,30 @@
 
     let count = 0
     let count2 = 0
+    let segundaVez = false;
+    let limite = 21
 
         function increment() {
-                if (count >= 21) {
-                    count = count
-                    countEl.textContent = count
+            if (count == 20 && count2 == 20) {
+                count = 0
+                count2 = 0
+                limite=2
+                count<=limite;
+                count2<=limite;
+            }
+                if (count >=limite) {
+                    count = count;
+                    countEl.textContent = count;
                 } else
                     count += 1
                 countEl.textContent = count
             }
+
         function increment2() {
-        if (count2>=21){
+        if (count2>=limite){
             count2 = count2
             countEl2.textContent = count2
+            segundaVez=false;
         }  else
             count2 += 1
             countEl2.textContent = count2

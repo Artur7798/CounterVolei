@@ -1,6 +1,8 @@
     let saveEl = document.getElementById("save-el")
     let countEl = document.getElementById("count-el") // pass in arguments
     let countEl2 = document.getElementById("count-el2") // pass in arguments
+    let NewCount = document.getElementById("count-new") // pass in arguments
+    let NewCount2 = document.getElementById("count-new2") // pass in arguments
     let placar = "O placar final ficou: "
     //Tela de informações
     let inputBtn = document.getElementById("increment-btn1")
@@ -25,8 +27,6 @@
     grupo2=[]
     jogo1=[]
     jogo2=[]
-
-
 
     //Time1
     inputBtn.addEventListener("click", function() {
@@ -107,16 +107,21 @@
 
     let count = 0
     let count2 = 0
-    let segundaVez = false;
+    let countNew= 0
+    let countNew2= 0
     let limite = 21
 
         function increment() {
             if (count == 20 && count2 == 20) {
-                count = 0
-                count2 = 0
-                limite=2
-                count<=limite;
-                count2<=limite;
+                count = 20
+                count2 = 20
+                limite = 2
+                if (countNew>=limite){
+                    countNew=countNew
+                    NewCount.textContent=countNew
+                } else
+                    countNew += 1
+                    NewCount.textContent=countNew
             }
                 if (count >=limite) {
                     count = count;
@@ -125,12 +130,21 @@
                     count += 1
                 countEl.textContent = count
             }
-
         function increment2() {
+            if (count == 20 && count2 == 20) {
+                count = 20
+                count2 = 20
+                limite = 2
+                if (countNew2>=limite){
+                    countNew2=countNew2
+                    NewCount2.textContent=countNew2
+                } else
+                    countNew2 += 1
+                NewCount2.textContent=countNew2
+            }
         if (count2>=limite){
             count2 = count2
             countEl2.textContent = count2
-            segundaVez=false;
         }  else
             count2 += 1
             countEl2.textContent = count2
@@ -157,12 +171,16 @@
                 let countStr= count + " -"
                 let countStr2= count2
                 Info.style.display = "block";
-                Info.textContent= "Participantes: " + time1 +" " + "do" +" "+"grupo:" + grupo1 +" " + "fizeram" +" "+ count+"." + "Já os Participantes: " + time2 +" " + "do" +" "+"grupo:" + grupo2 +" " + "fizeram" +" "+ count2
+                Info.textContent= "Participantes: " + time1 +" " + "do" +" "+"grupo:" + grupo1 +" " + "fizeram" +" "+ count + "("+ countNew +")" + "Já os Participantes: " + time2 +" " + "do" +" "+"grupo:" + grupo2 +" " + "fizeram" +" "+ count2 + "("+ countNew2 +")"
                 saveEl.textContent = placar + countStr +" " + countStr2
                 countEl.textContent = 0
                 count = 0
                 countEl2.textContent = 0
                 count2 = 0
+                NewCount.textContent=0
+                countNew=0
+                NewCount2.textContent=0
+                countNew2=0
             }
             function NewGame(){
             window.location.reload()

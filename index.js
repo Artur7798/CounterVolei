@@ -150,6 +150,10 @@
             countEl2.textContent = count2
         }
         function menos() {
+        if (count==20 && count2==20) {
+            count = 20
+            count2 = 20
+        }
             if (count < 0) {
                 count=0
                 countEl.textContent = count

@@ -149,20 +149,28 @@
             count2 += 1
             countEl2.textContent = count2
         }
-        function menos() {
-        if (count==20 && count2==20) {
-            count = 20
-            count2 = 20
-        }
-            if (count < 0) {
-                count=0
-                countEl.textContent = count
-            } else {
-                count -= 1
-                countEl.textContent = count
+
+    function menos() {
+        if (count == 20 && count2 == 20) {
+            limite = -1;
+            if (countNew > limite) {
+                countNew -= 1;
+            }
+            NewCount.textContent = countNew;
+        } else {
+            if (count > 0) {
+                count -= 1;
+                countEl.textContent = count;
+            }
+            if (count2 > 0) {
+                count2 -= 1;
+                countEl2.textContent = count2;
             }
         }
-        function menos2() {
+    }
+
+
+    function menos2() {
             if (count2 < 0) {
                 count2=0
                 countEl2.textContent = count2

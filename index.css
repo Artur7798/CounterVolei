@@ -17,7 +17,7 @@ body {
 }
 
 #deli{
-    width: 100%;
+    max-width: 500px;
     height: 50%;
 }
 
@@ -47,7 +47,7 @@ form{
 #count-el{
     font-size: 63px;
     position: absolute;
-    left: 641px;
+    left: 637px;
     top: 202px;
 }
 #increment-btn{
@@ -87,10 +87,10 @@ form{
 }
 #save-el{
     position: absolute;
-    left: 754px;
+    left: 705px;
     top: 327px;
     font-size: 23px;
-    width: 175px;
+    width: 229px;
 }
 #save_btn{
     position: absolute;

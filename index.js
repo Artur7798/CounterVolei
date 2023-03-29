@@ -152,7 +152,7 @@
 
     function menos() {
         if (count == 20 && count2 == 20) {
-            limite = -1;
+            limite = 0;
             if (countNew > limite) {
                 countNew -= 1;
             }
@@ -162,26 +162,29 @@
                 count -= 1;
                 countEl.textContent = count;
             }
+        }
+    }
+    function menos2() {
+        if (count == 20 && count2 == 20) {
+            limite = 0;
+            if (countNew2 > limite) {
+                countNew2 -= 1;
+            }
+            NewCount2.textContent = countNew2;
+        } else {
             if (count2 > 0) {
                 count2 -= 1;
                 countEl2.textContent = count2;
             }
         }
     }
-
-
-    function menos2() {
-            if (count2 < 0) {
-                count2=0
-                countEl2.textContent = count2
-            } else {
-                count2 -= 1
-                countEl2.textContent = count2
-            }
-        }
         function save(){
-                let countStr= count + " -"
-                let countStr2= count2
+                if (count==0 && count2==0){
+                    save()
+                }
+                document.getElementById("save_btn").onclick = null;
+                let countStr= count + " " +"(" + countNew + ")" + " -"
+                let countStr2= count2 + " " +"(" + countNew2 + ")"
                 Info.style.display = "block";
                 Info.textContent= "Participantes: " + time1 +" " + "do" +" "+"grupo:" + grupo1 +" " + "fizeram" +" "+ count + "("+ countNew +")" + "Já os Participantes: " + time2 +" " + "do" +" "+"grupo:" + grupo2 +" " + "fizeram" +" "+ count2 + "("+ countNew2 +")"
                 saveEl.textContent = placar + countStr +" " + countStr2

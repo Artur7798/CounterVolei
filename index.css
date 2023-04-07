@@ -10,10 +10,10 @@ body {
     border: solid 5px;
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 31%;
     transform: translate(-50%, -50%);
-    width: 406px;
-    height: 278px;
+    width: 407px;
+    height: 578px;
 }
 #deli{
     max-width: 500px;
@@ -46,7 +46,7 @@ form{
 #count-el{
     font-size: 164px;
     position: absolute;
-    left: 203px;
+    left: 174px;
     top: 568px;
 }
 #increment-btn{
@@ -88,8 +88,8 @@ form{
     position: absolute;
     left: 317px;
     top: 907px;
-    font-size: 49px;
-    width: 262px;
+    font-size: 44px;
+    width: 259px;
 }
 #save_btn{
     position: absolute;

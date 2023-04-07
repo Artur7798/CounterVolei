@@ -10,12 +10,11 @@ body {
     border: solid 5px;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 30%;
     transform: translate(-50%, -50%);
-    width: 400px;
-    height: 300px;
+    width: 406px;
+    height: 278px;
 }
-
 #deli{
     max-width: 500px;
     height: 50%;
@@ -45,28 +44,28 @@ form{
     top: -476px;
 }
 #count-el{
-    font-size: 63px;
+    font-size: 164px;
     position: absolute;
-    left: 637px;
-    top: 202px;
+    left: 203px;
+    top: 568px;
 }
 #increment-btn{
     position: absolute;
-    left: 667px;
-    top: 345px;
-    font-size: 16px;
+    left: 204px;
+    top: 954px;
+    font-size: 56px;
 }
 #menos-btn{
     position: absolute;
-    left: 667px;
-    top: 377px;
-    font-size: 16px;
+    left: 209px;
+    top: 1062px;
+    font-size: 56px;
 }
 #menos2-btn{
     position: absolute;
-    left: 951px;
-    top: 383px;
-    font-size: 16px;
+    left: 606px;
+    top: 1062px;
+    font-size: 56px;
 }
 #time2{
     position: relative;
@@ -74,30 +73,30 @@ form{
     top: -535px;
 }
 #count-el2{
-    font-size: 63px;
+    font-size: 164px;
     position: absolute;
-    left: 949px;
-    top: 202px;
+    left: 623px;
+    top: 568px;
 }
 #increment-btn2{
     position: absolute;
-    left: 949px;
-    top: 345px;
-    font-size: 16px;
+    left: 607px;
+    top: 954px;
+    font-size: 56px;
 }
 #save-el{
     position: absolute;
-    left: 705px;
-    top: 327px;
-    font-size: 23px;
-    width: 229px;
+    left: 317px;
+    top: 907px;
+    font-size: 49px;
+    width: 262px;
 }
 #save_btn{
     position: absolute;
-    left: 739px;
-    top: 438px;
-    width: 12%;
-    font-size: 29px;
+    left: 354px;
+    top: 1172px;
+    width: 22%;
+    font-size: 60px;
     background-color: green;
 }
 #game{
@@ -126,30 +125,34 @@ input[type=checkbox] {
 
 #ul-el{
     position: absolute;
-    left: 566px;
-    top: 138px;
+    left: -24px;
+    top: 525px;
+    font-size: 25px;
 }
 #ul-el2{
-position: absolute;
-left: 843px;
-top: 138px;
+    position: absolute;
+    left: 431px;
+    top: 525px;
+    font-size: 25px;
 }
 
 #ul-el3{
     position: absolute;
-    left: 598px;
-    top: 188px;
+    left: 26px;
+    top: 588px;
+    font-size: 25px;
 }
 
 #ul-el4{
     position: absolute;
-    left: 878px;
-    top: 188px;
+    left: 528px;
+    top: 588px;
+    font-size: 25px;
 }
 #ul-el5{
     position: absolute;
-    left: 675px;
-    top: 206px;
-    font-size: 29px;
-    width: 217px;
+    left: 275px;
+    top: 560px;
+    font-size: 46px;
+    width: 201px;
 }

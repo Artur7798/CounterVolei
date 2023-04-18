@@ -5,15 +5,14 @@ body {
     height: 100vh;
 }
 
-#telainicio{
+#telainicio {
     background-color: green;
     border: solid 5px;
     position: absolute;
-    left: 50%;
-    top: 31%;
-    transform: translate(-50%, -50%);
+    left: 570px;
     width: 407px;
     height: 578px;
+    top: 329px;
 }
 #deli{
     max-width: 500px;

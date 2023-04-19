@@ -8,34 +8,6 @@ body {
 #telainicio {
     background-color: green;
     border: solid 5px;
-    position: absolute;
-    left: 570px;
-    width: 407px;
-    height: 578px;
-    top: 329px;
-}
-#deli{
-    max-width: 500px;
-    height: 50%;
-}
-
-
-h1{
-    ont-size: 37px;
-    text-align: center;
-    position: relative;
-    padding-top: 433px;
-    left: 614px;
-    top: -878px;
-}
-
-form{
-    position: relative;
-    left: -590px;
-    top: -365px;
-}
-#response_name{
-    width: 200px
 }
 #time1{
     position: relative;
@@ -62,7 +34,7 @@ form{
 }
 #menos2-btn{
     position: absolute;
-    left: 606px;
+    left: 680px;
     top: 1062px;
     font-size: 56px;
 }
@@ -74,34 +46,29 @@ form{
 #count-el2{
     font-size: 164px;
     position: absolute;
-    left: 623px;
+    left: 660px;
     top: 568px;
 }
 #increment-btn2{
     position: absolute;
-    left: 607px;
+    left: 680px;
     top: 954px;
     font-size: 56px;
 }
 #save-el{
     position: absolute;
-    left: 317px;
-    top: 907px;
+    left: 360px;
+    top: 911px;
     font-size: 44px;
     width: 259px;
 }
 #save_btn{
     position: absolute;
-    left: 354px;
+    left: 390px;
     top: 1172px;
     width: 22%;
     font-size: 60px;
     background-color: green;
-}
-#game{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 #divisao{
     position: relative;
@@ -124,34 +91,34 @@ input[type=checkbox] {
 
 #ul-el{
     position: absolute;
-    left: -24px;
+    left: 60px;
     top: 525px;
     font-size: 25px;
 }
 #ul-el2{
     position: absolute;
-    left: 431px;
+    left: 570px;
     top: 525px;
     font-size: 25px;
 }
 
 #ul-el3{
     position: absolute;
-    left: 26px;
+    left: 110px;
     top: 588px;
     font-size: 25px;
 }
 
 #ul-el4{
     position: absolute;
-    left: 528px;
+    left: 620px;
     top: 588px;
     font-size: 25px;
 }
 #ul-el5{
     position: absolute;
-    left: 275px;
+    left: 340px;
     top: 560px;
     font-size: 46px;
-    width: 201px;
+
 }

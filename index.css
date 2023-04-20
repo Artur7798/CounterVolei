@@ -16,26 +16,26 @@ body {
 #count-el{
     font-size: 164px;
     position: absolute;
-    left: 174px;
-    top: 568px;
+    left: 232px;
+    top: 417px;
 }
 
 #increment-btn{
     position: absolute;
-    left: 204px;
-    top: 954px;
+    left: 281px;
+    top: 654px;
     font-size: 56px;
 }
 #menos-btn{
     position: absolute;
-    left: 209px;
-    top: 1062px;
+    left: 285px;
+    top: 762px;
     font-size: 56px;
 }
 #menos2-btn{
     position: absolute;
-    left: 680px;
-    top: 1062px;
+    left: 775px;
+    top: 762px;
     font-size: 56px;
 }
 #time2{
@@ -46,26 +46,26 @@ body {
 #count-el2{
     font-size: 164px;
     position: absolute;
-    left: 660px;
-    top: 568px;
+    left: 752px;
+    top: 404px;
 }
 #increment-btn2{
     position: absolute;
-    left: 680px;
-    top: 954px;
+    left: 769px;
+    top: 661px;
     font-size: 56px;
 }
 #save-el{
     position: absolute;
-    left: 360px;
-    top: 911px;
+    left: 445px;
+    top: 662px;
     font-size: 44px;
     width: 259px;
 }
 #save_btn{
     position: absolute;
-    left: 390px;
-    top: 1172px;
+    left: 449px;
+    top: 872px;
     width: 22%;
     font-size: 60px;
     background-color: green;
@@ -91,33 +91,33 @@ input[type=checkbox] {
 
 #ul-el{
     position: absolute;
-    left: 60px;
-    top: 525px;
+    left: 160px;
+    top: 332px;
     font-size: 25px;
 }
 #ul-el2{
     position: absolute;
-    left: 570px;
-    top: 525px;
+    left: 677px;
+    top: 325px;
     font-size: 25px;
 }
 
 #ul-el3{
     position: absolute;
-    left: 110px;
-    top: 588px;
+    left: 206px;
+    top: 391px;
     font-size: 25px;
 }
 
 #ul-el4{
     position: absolute;
-    left: 620px;
-    top: 588px;
+    left: 720px;
+    top: 394px;
     font-size: 25px;
 }
 #ul-el5{
     position: absolute;
-    left: 340px;
-    top: 560px;
+    left: 440px;
+    top: 371px;
     font-size: 46px;
 }

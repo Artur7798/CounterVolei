@@ -20,47 +20,48 @@
 <body>
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <h1 style="font-size: 80px">
-        Contador de pontos de volei
-        <br/>
-        <a href="Divisão_do_Mês.html"><button style="Font-size: 49px">Divisão do Mês</button></a>
-        <button id="newGame" onclick="NewGame()" style="Font-size: 49px">Novo Jogo</button>
-      </h1>
-      <div id="telainicio">
-        <label style="font-size: 30px">Preencha as informações para poder começar o Jogo</label>
-        <div id="form">
-          <ul> <input type="text" style="font-size: 35px" placeholder="Participantes grupo 1" id="input-time1"></ul>
-          <ul><input type="text" style="font-size: 35px" placeholder="Participantes grupo 2" id="input-time2"></ul>
-          <ul><input type="text" style="font-size: 35px" placeholder="Nome do grupo 1" id="input-time3"></ul>
-          <ul><input type="text" style="font-size: 35px" placeholder="Nome do grupo 2" id="input-time4"></ul>
-          <ul><input type="number" style="font-size: 35px" placeholder="N do Jogo" id="input-time5"></ul>
-          <button id="increment-btn1" style="font-size: 35px">Enviar Informações</button>
-        </div>
-      </div>
-        <div id="game" style="display:none">
-            <ul id="ul-el"></ul>
-            <ul id="ul-el2"></ul>
-            <ul id="ul-el3"></ul>
-            <ul id="ul-el4"></ul>
-            <ul id="ul-el5"></ul>
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center" style="font-size: 80px">
+                Contador de pontos de volei
+                <br/>
+                <a href="Divisão_do_Mês.html"><button style="Font-size: 49px">Divisão do Mês</button></a>
+                <button id="newGame" onclick="NewGame()" style="Font-size: 49px">Novo Jogo</button>
+            </h1>
+            <div id="telainicio">
+                <label style="font-size: 30px">Preencha as informações para poder começar o Jogo</label>
+                <div id="form">
+                    <ul> <input type="text" style="font-size: 25px" placeholder="Participantes grupo 1" id="input-time1"></ul>
+                    <ul><input type="text" style="font-size: 25px" placeholder="Participantes grupo 2" id="input-time2"></ul>
+                    <ul><input type="text" style="font-size: 25px" placeholder="Nome do grupo 1" id="input-time3"></ul>
+                    <ul><input type="text" style="font-size: 25px" placeholder="Nome do grupo 2" id="input-time4"></ul>
+                    <ul><input type="number" style="font-size: 25px" placeholder="N do Jogo" id="input-time5"></ul>
+                    <button id="increment-btn1" style="font-size: 25px">Enviar Informações</button>
+                </div>
+            </div>
+            <div id="game" style="display:none">
+                <ul id="ul-el"></ul>
+                <ul id="ul-el2"></ul>
+                <ul id="ul-el3"></ul>
+                <ul id="ul-el4"></ul>
+                <ul id="ul-el5"></ul>
 
-            <h2 id="count-el">0</h2>
-            <h3 id="count-new" style="position: absolute;left: 318px;top: 729px;font-size: 108px;">0</h3>
-            <button id="increment-btn" onclick="increment()">+1</button>
-            <button id="menos-btn" onclick="menos()">-1</button>
+                <h2 id="count-el">0</h2>
+                <h3 id="count-new" style="position: absolute; left: 389px; top: 532px; font-size: 108px;">0</h3>
 
-            <h2 id="count-el2" >0</h2>
-            <h3 id="count-new2" style="position: absolute;left: 600px;top: 731px;font-size: 108px;">0</h3>
-            <button id="increment-btn2" onclick="increment2()">+1</button>
-            <button id="menos2-btn" onclick="menos2()">-1</button>
-            <p id="save-el"></p>
-            <button id="save_btn" onclick="save()">Salvar partida</button>
-        </div>
-        <p id="total_response"></p>
-        <div id="copia_cola">
-            <textarea id="textarea" style="position: absolute;top: 1343px;left: 211px;width: 60%;height: 10%;font-size: 20px;display: none"></textarea>
+                <button id="increment-btn" onclick="increment()">+1</button>
+                <button id="menos-btn" onclick="menos()">-1</button>
+
+                <h2 id="count-el2" >0</h2>
+                <h3 id="count-new2" style="position: absolute;left: 714px;top: 531px;font-size: 108px;">0</h3>
+                <button id="increment-btn2" onclick="increment2()">+1</button>
+                <button id="menos2-btn" onclick="menos2()">-1</button>
+                <p id="save-el"></p>
+                <button id="save_btn" onclick="save()">Salvar partida</button>
+                <p id="total_response"></p>
+                            <div id="copia_cola">
+                <textarea id="textarea" class="h-auto" style="position: absolute;top: 1054px;left: 211px;width: 60%;font-size: 20px;display: block;display: none"></textarea>
+            </div>
         </div>
     </div>
   </div>

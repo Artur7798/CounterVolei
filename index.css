@@ -2,7 +2,6 @@ body {
     background-color: rgba(12, 74, 110, 1);
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
-    height: 100vh;
 }
 
 #telainicio {
@@ -20,6 +19,7 @@ body {
     left: 174px;
     top: 568px;
 }
+
 #increment-btn{
     position: absolute;
     left: 204px;
@@ -120,5 +120,4 @@ input[type=checkbox] {
     left: 340px;
     top: 560px;
     font-size: 46px;
-
 }

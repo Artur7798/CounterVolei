@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="../index.css">
-  <meta charset="UTF-8">
   <title>Counter Volei</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+    <link rel="stylesheet" href="../index.css">
 </head>
 <body>
 
@@ -19,13 +31,12 @@
       <div id="telainicio">
         <label style="font-size: 30px">Preencha as informações para poder começar o Jogo</label>
         <div id="form">
-          <ul> <input type="text" style="width: 344px;font-size: 30px" placeholder="Participantes do grupo 1" id="input-time1"></ul>
-          <ul><input type="text" style="width: 344px;font-size: 30px" placeholder="Participantes do grupo 2" id="input-time2"></ul>
-          <ul><input type="text" style="width: 344px;font-size: 30px" placeholder="Nome do grupo 1" id="input-time3"></ul>
-          <ul><input type="text" style="width: 344px;font-size: 30px" placeholder="Nome do grupo 2" id="input-time4"></ul>
-          <ul><input type="number" style="width: 344px;font-size: 30px" placeholder="N do Jogo" id="input-time5"></ul>
-
-          <button id="increment-btn1" style="font-size: 40px;">Enviar Informações</button>
+          <ul> <input type="text" style="font-size: 35px" placeholder="Participantes grupo 1" id="input-time1"></ul>
+          <ul><input type="text" style="font-size: 35px" placeholder="Participantes grupo 2" id="input-time2"></ul>
+          <ul><input type="text" style="font-size: 35px" placeholder="Nome do grupo 1" id="input-time3"></ul>
+          <ul><input type="text" style="font-size: 35px" placeholder="Nome do grupo 2" id="input-time4"></ul>
+          <ul><input type="number" style="font-size: 35px" placeholder="N do Jogo" id="input-time5"></ul>
+          <button id="increment-btn1" style="font-size: 35px">Enviar Informações</button>
         </div>
       </div>
         <div id="game" style="display:none">
@@ -44,7 +55,6 @@
             <h3 id="count-new2" style="position: absolute;left: 600px;top: 731px;font-size: 108px;">0</h3>
             <button id="increment-btn2" onclick="increment2()">+1</button>
             <button id="menos2-btn" onclick="menos2()">-1</button>
-
             <p id="save-el"></p>
             <button id="save_btn" onclick="save()">Salvar partida</button>
         </div>
@@ -54,7 +64,6 @@
         </div>
     </div>
   </div>
-
 </div>
 
   <script>
@@ -95,6 +104,10 @@
 
   <script src="../index.js"></script>
 </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 </body>
 </html>
 

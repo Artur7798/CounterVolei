@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Counter Volei</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body style=" background-color: rgba(12, 74, 110, 1);font-family: 'Open Sans', 'Helvetica Neue', sans-serif;text-align: center;">
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center" style="font-size: 80px">
+            Counter Volei
+                <br/>
+                <a href="Divisão_do_Mês.html"><button style="Font-size: 49px">Divisão do Mês</button></a>
+                <button id="newGame" onclick="NewGame()" style="Font-size: 49px">Novo Jogo</button>
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="telainicio" style=" border: solid 5px;background-color: green">
+                <label style="font-size: 30px">Preencha as informações para poder começar o Jogo</label>
+                <div id="form">
+                    <ul> <input type="text" style="font-size: 25px" placeholder="Participantes grupo 1" id="input-time1"></ul>
+                    <ul><input type="text" style="font-size: 25px" placeholder="Participantes grupo 2" id="input-time2"></ul>
+                    <ul><input type="text" style="font-size: 25px" placeholder="Nome do grupo 1" id="input-time3"></ul>
+                    <ul><input type="text" style="font-size: 25px" placeholder="Nome do grupo 2" id="input-time4"></ul>
+                    <ul><input type="number" style="font-size: 25px" placeholder="N do Jogo" id="input-time5"></ul>
+                    <button id="increment-btn1" style="font-size: 25px">Enviar Informações</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div id="game" style="display:none">
+            <div class="row">
+                <div class="col-md-5">
+                <ul id="ul-el" style="font-size:25px"></ul>
+                <ul id="ul-el3" style="font-size:25px" ></ul>
+                <h2 id="count-el" style="font-size: 164px">0</h2>
+                <h3 id="count-new" style="font-size: 108px;position: relative;top: -67px;left: 49px;">0</h3>
+                <button id="increment-btn" style="font-size: 56px" onclick="increment()">+1</button>
+                <button id="menos-btn" style="font-size: 56px" onclick="menos()">-1</button>
+            </div>
+                <br/>
+                <div class="col-md-2">
+                    <ul id="ul-el5"style="font-size:25px"></ul>
+                </div>
+                </br>
+                <div class="col-md-5 ">
+                <ul id="ul-el2" style="font-size:25px" ></ul>
+                <ul id="ul-el4" style="font-size:25px"></ul>
+                <h2 id="count-el2" style="font-size: 164px">0</h2>
+                <h3 id="count-new2" style="font-size: 108px;position: relative;top: -67px;left: 49px;">0</h3>
+                <button id="increment-btn2" style="font-size: 56px" onclick="increment2()">+1</button>
+                <button id="menos2-btn" style="font-size: 56px" onclick="menos2()">-1</button>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                      <p id="save-el" style="font-size: 44px"></p>
+                      <div id="copia_cola"/>
+                      <textarea id="textarea" class="h-auto" style="width: 100%;font-size: 20px;display: none"></textarea>
+                      <button id="save_btn" style="font-size: 60px;background-color: green" onclick="save()">Salvar partida</button>
+                <p id="total_response"></p>
+
+                  </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+  <script>
+      /*JS que copia e cola os dados para o textarea*/
+    function copiarTabela() {
+      // Obter a referência da tabela
+      var tabela = document.getElementById("tabela");
+
+      // Obter todas as linhas da tabela
+      var linhas = tabela.rows;
+
+      // Percorrer todas as linhas e obter as células
+      var texto = "";
+      for (var i = 0; i < linhas.length; i++) {
+        var linha = linhas[i];
+        var celulas = linha.cells;
+
+        // Concatenar os valores das células separados por vírgula
+        var linhaTexto = "";
+        for (var j = 0; j < celulas.length; j++) {
+          var celula = celulas[j];
+          linhaTexto += celula.textContent + ",";
+        }
+
+        // Remover a vírgula final e adicionar uma quebra de linha
+        linhaTexto = linhaTexto.slice(0, -1) + "\n";
+
+        // Adicionar a linha concatenada à variável de texto
+        texto += linhaTexto;
+      }
+
+      // Obter a referência do elemento textarea
+      var textarea = document.getElementById("textarea");
+
+      // Definir o valor do textarea para a string resultante
+      textarea.value = texto;
+    }
+  </script>
+
+  <script>
+        /*JS com todas as funcoes de botoes e inputs*/
+        let saveEl = document.getElementById("save-el")
+        let countEl = document.getElementById("count-el") // pass in arguments
+        let countEl2 = document.getElementById("count-el2") // pass in arguments
+        let NewCount = document.getElementById("count-new") // pass in arguments
+        let NewCount2 = document.getElementById("count-new2") // pass in arguments
+        let placar = "O placar final ficou: "
+        //Tela de informações
+        let inputBtn = document.getElementById("increment-btn1")
+        const inputTime1 = document.getElementById("input-time1")
+        const ulEl= document.getElementById("ul-el")
+        const inputTime2 = document.getElementById("input-time2")
+        const ulEl2= document.getElementById("ul-el2")
+        const inputTime3 = document.getElementById("input-time3")
+        const ulEl3= document.getElementById("ul-el3")
+        const inputTime4 = document.getElementById("input-time4")
+        const ulEl4= document.getElementById("ul-el4")
+        const inputTime5 = document.getElementById("input-time5")
+        const ulEl5= document.getElementById("ul-el5")
+        const Info=document.getElementById("textarea")
+        const Game=document.getElementById("game")
+        const telaInicio=document.getElementById("telainicio")
+
+
+        time1=[]
+        time2=[]
+        grupo1=[]
+        grupo2=[]
+        jogo1=[]
+        jogo2=[]
+
+        //Time1
+        inputBtn.addEventListener("click", function() {
+            time1.push(inputTime1.value)
+            inputTime1.value=""
+            renderTime1()
+        })
+        //Time1
+        function renderTime1() {
+            let ListItems = ""
+            for (let i = 0; i < time1.length; i++) {
+                ListItems += time1[i]
+            }
+            ulEl.innerHTML = "<b>Participantes:</b> " + ListItems
+        }
+        //Time2
+        inputBtn.addEventListener("click", function() {
+            time2.push(inputTime2.value)
+            inputTime2.value=""
+            renderTime2()
+        })
+        //Time2
+        function renderTime2() {
+            let ListItems = ""
+            for (let i = 0; i < time2.length; i++) {
+                ListItems += time2[i]
+            }
+            ulEl2.innerHTML = "<b>Participantes:</b> " + ListItems
+        }
+
+        //Time3
+        inputBtn.addEventListener("click", function() {
+            grupo1.push(inputTime3.value)
+            inputTime3.value=""
+            renderTime3()
+        })
+        //Time3
+        function renderTime3() {
+            let ListItems = ""
+            for (let i = 0; i < grupo1.length; i++) {
+                ListItems += grupo1[i]
+            }
+            ulEl3.innerHTML = "<b>Time:</b> " + ListItems
+        }
+
+        //Time4
+        inputBtn.addEventListener("click", function() {
+            grupo2.push(inputTime4.value)
+            inputTime4.value=""
+            renderTime4()
+        })
+        //Time3
+        function renderTime4() {
+            let ListItems = ""
+            for (let i = 0; i < grupo2.length; i++) {
+                ListItems += grupo2[i]
+            }
+            ulEl4.innerHTML = "<b>Time:</b> " + ListItems
+        }
+        //N do Jogo 1
+        inputBtn.addEventListener("click", function() {
+            jogo1.push(inputTime5.value)
+            inputTime5.value=""
+            renderTime5()
+            alert("Bom jogo")
+            Game.style.display = "block";
+            telaInicio.style.display="none";
+
+        })
+        //N jogo1
+        function renderTime5() {
+            let ListItems = ""
+            for (let i = 0; i < jogo1.length; i++) {
+                ListItems += jogo1[i]
+            }
+            ulEl5.innerHTML = "<b>Jogo N:</b>" + ListItems
+        }
+
+        let count = 0
+        let count2 = 0
+        let countNew= 0
+        let countNew2= 0
+        let limite = 21
+
+        function increment() {
+            if (count == 20 && count2 == 20) {
+                count = 20
+                count2 = 20
+                limite = 2
+                if (countNew>=limite){
+                    countNew=countNew
+                    NewCount.textContent=countNew
+                } else
+                    countNew += 1
+                NewCount.textContent=countNew
+            }
+            if (count >=limite) {
+                count = count;
+                countEl.textContent = count;
+            } else
+                count += 1
+            countEl.textContent = count
+        }
+        function increment2() {
+            if (count == 20 && count2 == 20) {
+                count = 20
+                count2 = 20
+                limite = 2
+                if (countNew2>=limite){
+                    countNew2=countNew2
+                    NewCount2.textContent=countNew2
+                } else
+                    countNew2 += 1
+                NewCount2.textContent=countNew2
+            }
+            if (count2>=limite){
+                count2 = count2
+                countEl2.textContent = count2
+            }  else
+                count2 += 1
+            countEl2.textContent = count2
+        }
+
+        function menos() {
+            if (count == 20 && count2 == 20) {
+                limite = 0;
+                if (countNew > limite) {
+                    countNew -= 1;
+                }
+                NewCount.textContent = countNew;
+            } else {
+                if (count > 0) {
+                    count -= 1;
+                    countEl.textContent = count;
+                }
+            }
+        }
+        function menos2() {
+            if (count == 20 && count2 == 20) {
+                limite = 0;
+                if (countNew2 > limite) {
+                    countNew2 -= 1;
+                }
+                NewCount2.textContent = countNew2;
+            } else {
+                if (count2 > 0) {
+                    count2 -= 1;
+                    countEl2.textContent = count2;
+                }
+            }
+        }
+        function save(){
+            if (count==0 && count2==0){
+                save()
+            }
+            document.getElementById("save_btn").onclick = null;
+            let countStr= count + " " +"(" + countNew + ")" + " -"
+            let countStr2= count2 + " " +"(" + countNew2 + ")"
+            Info.style.display = "block";
+            Info.textContent= "Participante(s): " + time1 +" " + "do" +" "+"grupo:" + grupo1 +" " + "fizeram" +" "+ count + "("+ countNew +")" + "Já os Participante(s): " + time2 +" " + "do" +" "+"grupo:" + grupo2 +" " + "fizeram" +" "+ count2 + "("+ countNew2 +")"
+            saveEl.textContent = placar + countStr +" " + countStr2
+            countEl.textContent = 0
+            count = 0
+            countEl2.textContent = 0
+            count2 = 0
+            NewCount.textContent=0
+            countNew=0
+            NewCount2.textContent=0
+            countNew2=0
+        }
+        function NewGame(){
+            window.location.reload()
+        }
+
+    </script>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
